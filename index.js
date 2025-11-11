@@ -23,6 +23,9 @@ async function run() {
   try {
     const db = client.db('RentWheels');
     const carsCollection = db.collection("cars");
+    // const addCarCollection = db.collection('addCar')
+
+
     await client.connect();
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
@@ -30,11 +33,50 @@ async function run() {
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
 
+    // for home page
     app.get("/cars", async (req, res) => {
       const cursor = carsCollection.find().sort({ created_at: -1 }).limit(6);
       const result = await cursor.toArray();
       res.send(result);
     });
+
+// for browse car page
+app.get("/browse-cars", async (req, res) => {
+      const cursor = carsCollection.find().sort({ created_at: -1 })
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+    // add car page
+    app.post('/cars', async (req, res) => {
+  const data = req.body;
+  console.log(data);
+
+  // Example: insert the new car into MongoDB
+  const result = await carsCollection.insertOne(data);
+
+  res.send({
+    success: true,
+    // insertedId: result.insertedId,
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
