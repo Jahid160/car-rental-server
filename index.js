@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const cors = require("cors");
 const express = require("express");
 require("dotenv").config();
@@ -23,6 +23,7 @@ async function run() {
   try {
     const db = client.db('RentWheels');
     const carsCollection = db.collection("cars");
+    
     // const addCarCollection = db.collection('addCar')
 
 
@@ -55,11 +56,61 @@ app.get("/browse-cars", async (req, res) => {
   // Example: insert the new car into MongoDB
   const result = await carsCollection.insertOne(data);
 
-  res.send({
-    success: true,
-    // insertedId: result.insertedId,
-  });
+  res.send(result);
 });
+
+// view details page 
+app.get('/browse-cars/:id', async(req,res)=>{
+  const {id} = req.params
+  console.log(id);
+  const objectId = new ObjectId(id)
+  const result = await carsCollection.findOne({_id: objectId})
+
+  res.send(result)
+})
+
+
+// My Listings page 
+app.get('/my-listing', async(req,res)=>{
+  const email = req.query.email
+  console.log(email);
+  const result = await carsCollection.find({provider_email: email}).toArray()
+
+  res.send(result)
+})
+
+// my Listings page card update
+ app.put("/browse-cars/:id",  async (req, res) => {
+      const { id } = req.params;
+      const data = req.body;
+      console.log(id)
+      console.log(data)
+      const objectId = new ObjectId(id);
+      const filter = { _id: objectId };
+      const update = {
+        $set: data,
+      };
+
+      const result = await carsCollection.updateOne(filter, update);
+
+      res.send({
+        success: true,
+        result,
+      });
+    });
+// my Listings page card delete
+ app.delete("/browse-cars/:id",  async (req, res) => {
+      const { id } = req.params;
+      
+
+      const result = await carsCollection.deleteOne({_id: new ObjectId(id)})
+
+      res.send({
+        success: true,
+        result,
+      });
+    });
+
 
 
 
