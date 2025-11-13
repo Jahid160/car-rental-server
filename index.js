@@ -23,6 +23,7 @@ async function run() {
   try {
     const db = client.db('RentWheels');
     const carsCollection = db.collection("cars");
+    const userDBCollection = db.collection("userDB")
     
     // const addCarCollection = db.collection('addCar')
 
@@ -110,6 +111,18 @@ app.get('/my-listing', async(req,res)=>{
         result,
       });
     });
+
+    // my booking page 
+     app.post('/userDB/:id', async (req, res) => {
+      const id = req.params.id
+  const data = req.body;
+  console.log(data);
+
+  // Example: insert the new car into MongoDB
+  const result = await userDBCollection.insertOne(data);
+
+  res.send(result);
+});
 
 
 
