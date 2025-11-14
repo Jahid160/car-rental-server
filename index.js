@@ -124,12 +124,53 @@ app.get('/my-listing', async(req,res)=>{
   res.send(result);
 });
 
+app.get('/my-booking', async(req,res)=>{
+  const cursor = userDBCollection.find().sort({ created_at: -1 })
+      const result = await cursor.toArray();
+      res.send(result);
+})
 
+app.get('/my-booking/:id', async(req,res)=>{
+ const {id} = req.params
+  console.log(id);
+  const objectId = new ObjectId(id)
+  const result = await userDBCollection.findOne({_id: objectId})
 
+  res.send(result)
+})
 
+// my booking update
+app.put("/my-booking/:id",  async (req, res) => {
+      const { id } = req.params;
+      const data = req.body;
+      console.log(id)
+      console.log(data)
+      const objectId = new ObjectId(id);
+      const filter = { _id: objectId };
+      const update = {
+        $set: data,
+      };
 
+      const result = await carsCollection.updateOne(filter, update);
 
+      res.send({
+        success: true,
+        result,
+      });
+    });
 
+// my booking page delete
+app.delete("/my-booking/:id",  async (req, res) => {
+      const { id } = req.params;
+      
+
+      const result = await userDBCollection.deleteOne({_id: new ObjectId(id)})
+
+      res.send({
+        success: true,
+        result,
+      });
+    });
 
 
 
