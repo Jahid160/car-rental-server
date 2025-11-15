@@ -139,6 +139,20 @@ app.get('/my-booking/:id', async(req,res)=>{
   res.send(result)
 })
 
+// status update
+app.patch("/browse-cars/status/:id", async (req, res) => {
+  const id = req.params.id;
+  const { status } = req.body;
+
+  const result = await carsCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status } }
+  );
+
+  res.send(result);
+});
+
+
 // my booking update
 app.put("/my-booking/:id",  async (req, res) => {
       const { id } = req.params;
@@ -172,6 +186,13 @@ app.delete("/my-booking/:id",  async (req, res) => {
       });
     });
 
+// search api
+app.get('/search', async(req,res)=>{
+  const searchText = req.query.search;
+  const result = await carsCollection.find({car_name
+:{$regex: searchText, $options: "i"}}).toArray()
+res.send(result)
+})
 
 
 
