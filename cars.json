@@ -8,7 +8,8 @@
     "hosted_image_url": "https://tse3.mm.bing.net/th/id/OIP.UR1KP1D8H-zp6CWPMT8rDAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "AutoRent BD",
     "provider_email": "contact@autorentbd.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:01.000Z"
   },
   {
     "car_name": "Honda CR-V",
@@ -19,7 +20,8 @@
     "hosted_image_url": "https://tse3.mm.bing.net/th/id/OIP.jwpFZHINYlfMKCgEAnvPdgHaE6?cb=ucfimgc2&w=2048&h=1360&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "CarLink Rentals",
     "provider_email": "info@carlink.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:02.000Z"
   },
   {
     "car_name": "Tesla Model 3",
@@ -30,7 +32,8 @@
     "hosted_image_url": "https://tse4.mm.bing.net/th/id/OIP.h5EbHW2yz_GCcRnNDDUtMAHaDs?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "EV Motion",
     "provider_email": "support@evmotion.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:03.000Z"
   },
   {
     "car_name": "BMW 5 Series",
@@ -41,7 +44,8 @@
     "hosted_image_url": "https://tse3.mm.bing.net/th/id/OIP.mAoZw1x66YHi3bha55a36wHaEx?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "Elite Drive",
     "provider_email": "booking@elitedrive.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:04.000Z"
   },
   {
     "car_name": "Hyundai Tucson",
@@ -52,7 +56,8 @@
     "hosted_image_url": "https://th.bing.com/th/id/OIP.0xxksfuOEHdRO0xDVEUTYQHaEL?o=7&cb=ucfimgc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "CityRide",
     "provider_email": "cityride@gmail.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:05.000Z"
   },
   {
     "car_name": "Nissan Leaf",
@@ -63,7 +68,8 @@
     "hosted_image_url": "https://tse1.mm.bing.net/th/id/OIP.8rGIiFyeeeqaQ8DyxJEF9QHaEp?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "GreenWheels",
     "provider_email": "hello@greenwheels.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:06.000Z"
   },
   {
     "car_name": "Toyota Yaris",
@@ -74,7 +80,8 @@
     "hosted_image_url": "https://media.toyota.co.uk/wp-content/uploads/sites/5/2023/05/mc24-yar-prem-01-pr-scaled.jpg",
     "provider_name": "QuickRent",
     "provider_email": "support@quickrent.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:07.000Z"
   },
   {
     "car_name": "Mercedes-Benz S-Class",
@@ -85,7 +92,8 @@
     "hosted_image_url": "https://th.bing.com/th/id/OIP.4qA7_FUxmLy9qAuJnesoFQHaEK?o=7&cb=ucfimgc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "Prestige Motors",
     "provider_email": "admin@prestigemotors.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:08.000Z"
   },
   {
     "car_name": "Suzuki Swift",
@@ -96,7 +104,8 @@
     "hosted_image_url": "https://th.bing.com/th/id/OIP.jkEXTMIrTQsPnoAZsyeiDgHaEK?o=7&cb=ucfimgc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "SwiftGo",
     "provider_email": "rent@swiftgo.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:09.000Z"
   },
   {
     "car_name": "Range Rover Evoque",
@@ -107,6 +116,7 @@
     "hosted_image_url": "https://tse4.mm.bing.net/th/id/OIP.XfKAuH6uswqFmzHaLv_W0AHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3",
     "provider_name": "RoyalDrive",
     "provider_email": "contact@royaldrive.com",
-    "created_at": "2025-11-15T21:27:00.000Z"
+    "status": "available",
+    "created_at": "2025-11-15T21:27:10.000Z"
   }
 ]
